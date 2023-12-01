@@ -28,4 +28,18 @@ pipeline
       }
     }
   }
+  post
+  {
+    //conditions here will be executed after build
+    always
+    {
+      //always run despite build failed
+      echo "Post build condition running'
+      failure
+      {
+        //only if build is failed
+        echo 'Post action if build failed
+      }
+    }
+  } 
 }
